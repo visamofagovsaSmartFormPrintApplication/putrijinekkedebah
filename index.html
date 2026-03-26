@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>putri jinek 💕</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ffc0cb, #ff69b4);
+      font-family: 'Comic Sans MS', cursive;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 25px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      transition: 0.3s;
+      max-width: 300px;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      background: #ff69b4;
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .message {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #ff1493;
+      min-height: 60px;
+    }
+
+    .heart {
+      font-size: 30px;
+      animation: beat 1s infinite;
+    }
+
+    @keyframes beat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <h2>Hai kamu putri zull jinek💕</h2>
+  <p>Klik terus yaa </p>
+  <button class="btn" onclick="showMessage()">Klik aku</button>
+
+  <div class="message" id="msg"></div>
+</div>
+
+<script>
+  let clickCount = 0;
+
+  const messages = [
+    "Kamu lucu banget sih ",
+    "wkwkwk tapi bboong 😆💕",
+    "ajak k lucum laguk",
+    "jinekkkk",
+    "hhhhhhhhh jinek  jinekk ",
+    "putri cantek hehe",
+    "kedikkk",
+    "cantekk loek deh",
+    "senyum putri zull jinek",
+    "ptri muahh wkwkwk"
+  ];
+
+  function showMessage() {
+    const msg = document.getElementById('msg');
+    msg.innerHTML = messages[clickCount % messages.length] + "<div class='heart'>❤️</div>";
+    clickCount++;
+  }
+</script>
+
+</body>
+</html>
